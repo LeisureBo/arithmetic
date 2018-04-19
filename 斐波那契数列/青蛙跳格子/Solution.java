@@ -17,4 +17,37 @@ public class Solution {
             return array[array.length-1];
         }
     }
+<<<<<<< HEAD
+    public double Power(double base, int exponent) {
+        if(base == 0){
+            return 0;
+        }else if(exponent == 0){
+            return 1;
+        }else if(exponent == 1){
+            return base;
+        }else if(exponent > 1){
+        	
+           double result = Power(base,exponent>>1);
+           
+           result *= result;
+           if((exponent & 0x1) == 1){
+               result *= base;
+           }
+          
+           return result;
+        }else {
+        	
+            exponent *= -1;
+          
+            double result = Power(base,exponent);
+            result = 1/result;
+            return result;
+        }
+    }
+    public static void main(String[] args){
+    	Solution s = new Solution();
+    	System.out.println(s.Power(2, -3));
+    }
+=======
+>>>>>>> 11ed81fa09fa0c4efe13ded27b218a9c191a29fc
 }
